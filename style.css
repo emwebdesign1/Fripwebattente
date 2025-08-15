@@ -1,0 +1,120 @@
+/* FripWeb Coming Soon - Pro mini landing using brand logo */
+:root{
+  --bordeaux:#7f0000;
+  --bordeaux-2:#6e0000;
+  --beige:#f4f1ec;
+  --text:#1b1b1b;
+  --white:#ffffff;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 800px at 20% 10%, #9b1a1a22, transparent 60%),
+    radial-gradient(1000px 700px at 90% 30%, #7f000022, transparent 60%),
+    linear-gradient(180deg, var(--beige), #fff 60%);
+}
+
+/* Topbar */
+.topbar{
+  max-width:1080px;
+  margin:0 auto;
+  padding:18px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{display:flex; align-items:center; gap:12px;}
+.brand .logo{width:36px; height:36px; border-radius:8px; object-fit:cover}
+.brand-name{font-weight:800; letter-spacing:.2px; color:var(--bordeaux)}
+
+.icon-link svg{width:24px;height:24px;fill:var(--bordeaux);opacity:.9}
+.icon-link:hover svg{opacity:1}
+
+/* Hero */
+.hero{display:grid; place-items:center; padding:40px 16px 80px;}
+.card{
+  width:min(820px, 100%);
+  border-radius:18px;
+  padding:36px 28px;
+  text-align:center;
+  background:var(--white);
+  box-shadow: 0 20px 50px rgba(127,0,0,.12);
+  border:1px solid #eadfd9;
+}
+.glass{background:linear-gradient(180deg, #ffffffcc 0%, #ffffff 65%); backdrop-filter:saturate(130%) blur(2px);}
+
+.hero-logo{
+  width:min(180px, 50vw);
+  height:auto;
+  display:block;
+  margin:0 auto 14px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(127,0,0,.18);
+}
+
+h1{
+  margin:0 0 10px;
+  font-size:clamp(28px, 4.2vw, 46px);
+  color:var(--bordeaux);
+  line-height:1.1;
+}
+.subtitle{
+  margin:0 auto 22px;
+  max-width:56ch;
+  color:#444;
+}
+
+/* Subscribe form (demo) */
+.subscribe{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  align-items:center;
+  margin:24px 0 12px;
+  flex-wrap:wrap;
+}
+.subscribe input{
+  width:min(360px, 80vw);
+  padding:14px 16px;
+  border-radius:12px;
+  border:1px solid #e2d8d1;
+  outline:none;
+  font-size:16px;
+}
+.subscribe input:focus{border-color:var(--bordeaux)}
+.subscribe button{
+  padding:14px 18px;
+  border-radius:12px;
+  background:linear-gradient(180deg, var(--bordeaux), var(--bordeaux-2));
+  color:#fff;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .06s ease, box-shadow .2s ease;
+  box-shadow:0 8px 18px rgba(127,0,0,.25);
+}
+.subscribe button:active{transform:translateY(1px)}
+
+.details{margin-top:16px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap}
+.chip{
+  background:#f7ede8;
+  color:#6b3a34;
+  border:1px solid #eadfd9;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+/* Footer */
+.footer{ text-align:center; color:#6d6d6d; padding:30px 12px 50px; font-size:14px;}
+.footer .mini{font-size:12px; opacity:.9}
+
+/* Accessibility */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); border:0;
+}

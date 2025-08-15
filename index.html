@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FripWeb — Arrive bientôt</title>
+  <meta name="description" content="FripWeb, la plateforme suisse pour acheter et vendre des vêtements. Bientôt en ligne.">
+  <meta property="og:title" content="FripWeb arrive bientôt">
+  <meta property="og:description" content="La plateforme suisse pour acheter et vendre des vêtements.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="fripweb-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <img src="fripweb-logo.png" alt="Logo FripWeb" class="logo">
+        <span class="brand-name">FripWeb</span>
+      </div>
+      <nav class="socials" aria-label="Réseaux sociaux">
+        <a href="#" aria-label="Instagram (bientôt)" class="icon-link" title="Instagram (bientôt)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zM18 6.8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+        </a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card glass">
+        <img src="fripweb-logo.png" alt="FripWeb" class="hero-logo">
+        <h1>FripWeb arrive bientôt</h1>
+        <p class="subtitle">Trouve ton bonheur — la plateforme suisse pour acheter et vendre des vêtements.</p>
+
+        <form class="subscribe" onsubmit="event.preventDefault(); alert('Merci ! Votre email a bien été enregistré. (Démo)');">
+          <label class="sr-only" for="email">Votre email</label>
+          <input id="email" type="email" placeholder="Votre email" required>
+          <button type="submit">Prévenez-moi</button>
+        </form>
+
+        <div class="details">
+          <span class="chip">.ch</span>
+          <span class="chip">Lancement 2025</span>
+          <span class="chip">Made in Suisse</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> FripWeb. Tous droits réservés.</p>
+      <p class="mini">Bientôt sur Instagram.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
